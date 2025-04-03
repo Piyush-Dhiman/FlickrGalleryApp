@@ -12,13 +12,14 @@ type Props = {
 const Loader: React.FC<Props> = ({container, size, color}) => {
   return (
     <View style={[styles.container, {...container}]}>
-      <ActivityIndicator size={size || 'large'} color={color || '#000'} />
+      <ActivityIndicator size={size || 'large'} color={color || Colors.primary} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: Colors.transparent,
     justifyContent: 'center',
     alignItems: 'center',

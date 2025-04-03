@@ -1,9 +1,5 @@
 import React, {useEffect} from 'react';
-import {
-  View,
-  StyleSheet,
-  ScrollView,
-} from 'react-native';
+import {View, StyleSheet, ScrollView} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {
@@ -34,7 +30,7 @@ const HomeScreen = () => {
     <SafeAreaViewComponent isInitialScreen={true} screenName="Home">
       <View style={styles.content}>
         {loading ? (
-          <Loader />
+            <Loader />
         ) : (
           <View>
             <ScrollView nestedScrollEnabled>
@@ -49,7 +45,7 @@ const HomeScreen = () => {
                 isHorizontal={true}
               />
               <HomeScreenList
-                title="Public"
+                title="Nature"
                 data={listOneFeed}
                 isHorizontal={true}
               />
@@ -63,7 +59,7 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
   content: {
-    height: SCREEN_HEIGHT * 0.9,
+    height: SCREEN_HEIGHT * 0.85,
     paddingHorizontal: 10,
   },
   imageContainer: {

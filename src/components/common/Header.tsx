@@ -18,7 +18,13 @@ type Props = {
   _onRightBtnPress: () => void;
 };
 const Header = (props: Props) => {
-  const {hideBackBtn, screenName, _onLeftBtnPress, _onRightBtnPress, hideRightBtn} = props;
+  const {
+    hideBackBtn,
+    screenName,
+    _onLeftBtnPress,
+    _onRightBtnPress,
+    hideRightBtn,
+  } = props;
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={_onLeftBtnPress} style={styles.back}>
@@ -28,11 +34,13 @@ const Header = (props: Props) => {
       </TouchableOpacity>
       <Text style={styles.title}>{screenName}</Text>
       <TouchableOpacity onPress={_onRightBtnPress} style={styles.iconWrapper}>
-       {!hideRightBtn && <IIcon
-          name={'heart-circle-outline'}
-          size={moderateScale(30)}
-          color={Colors.white}
-        />}
+        {!hideRightBtn && (
+          <IIcon
+            name={'heart-circle-outline'}
+            size={moderateScale(30)}
+            color={Colors.white}
+          />
+        )}
       </TouchableOpacity>
     </View>
   );
@@ -55,6 +63,7 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(20),
     fontWeight: 'bold',
     textAlignVertical: 'center',
+    alignSelf: 'center',
   },
   back: {alignSelf: 'center'},
   iconWrapper: {
